@@ -54,7 +54,7 @@ Looks OK.
 ## 2. Install Nextflow
 Nextflow needs to be installed in each user’s home directory (permissions assigned to the user) and be available on the users path.
 
-Requirements: Java 1.8 or later is required. Also see Nextflow setup instructions here.
+Requirements: Java 1.8 or later is required. Also see Nextflow setup instructions [here](https://www.nextflow.io/docs/latest/getstarted.html#installation).
 
 ```
 $ mkdir /home/user/nextflow
@@ -69,7 +69,7 @@ nextflow version 19.07.0.5106
 Nextflow version 19.07 is fine.
 
 ## 3. Download the Rstudio Singularity image
-Download the Rstudio Singularity image here.
+Download the Rstudio Singularity image [here](http://web.cbio.uct.ac.za/~gerrit/downloads/bionic-R3.6.1-RStudio1.2.1335-bio.simg).
 
 ## 4. Running RStudio on a cluster
 This setup is focus on running a RStudio Singularity container on a SLURM cluster. For PBS/Torque or SGE clusters the only difference would be in the way that you would submit your interactive jobs. 
@@ -143,7 +143,7 @@ ssh USERNAME@SERVERNAME -L8082:localhost:37543
 ```
 Go to http://localhost:8082 and you'll be prompted for a username/password. The username is your usual server system `USERNAME` and the password is the `RSTUDIO_PASSWORD`.
 
-IMAGE
+![Rstudio](rstudio.png)
 
 DADA2 should be installed already
 ```
