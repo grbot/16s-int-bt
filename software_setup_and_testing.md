@@ -1,7 +1,7 @@
 # 16S Intermediate Bioinformatics Training -  Software setup and testing
 
-1. [Install Singularity on Ubuntu](#1.-install-singularity-on-ubuntu)
-2. [Install Nextflow](#2.-install-nextflow)
+1. [Install Singularity on Ubuntu](#1-install-singularity-on-ubuntu)
+2. [Install Nextflow](#2-install-nextflow)
 3. Download the Rstudio Singularity image
 4. Running RStudio on a cluster
 5. Running Rstudio on a server
