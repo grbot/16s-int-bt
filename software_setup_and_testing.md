@@ -1,4 +1,4 @@
-# 16S Intermediate Bioinformatics Training -  Software setup and testing
+# Software setup and testing
 
 1. [Install Singularity on Ubuntu](#1-install-singularity-on-ubuntu)
 2. [Install Nextflow](#2-install-nextflow)
