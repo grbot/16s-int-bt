@@ -66,7 +66,7 @@ $ nextflow -v
 nextflow version 19.07.0.5106
 ```
 
-Nextflow version 19.07 is fine.
+Nextflow version >=19.07 is fine.
 
 ## 3. Download the Rstudio Singularity image
 Download the Rstudio Singularity image [here](http://web.cbio.uct.ac.za/~gerrit/downloads/bionic-R3.6.1-RStudio1.2.1335-bio.simg).
