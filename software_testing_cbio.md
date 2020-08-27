@@ -1,8 +1,8 @@
-#16S Intermediate Bioinformatics Training -  Software setup and testing
+# 16S Intermediate Bioinformatics Training -  Software setup and testing
 
-[1. Test sshing into the cluster](#1.-test-sshing-into-the-cluster)
-[2. Running RStudio on a cluster](#2.-running-rstudio-on-a-cluster)
-[3. Running the DADA2 Nextflow pipeline on test data](#3.-running-the-dada2-textflow-pipeline-on-test-data)
+1. [Test sshing into the cluster](#1.-test-sshing-into-the-cluster)
+2. [Running RStudio on a cluster](#2.-running-rstudio-on-a-cluster)
+3. [Running the DADA2 Nextflow pipeline on test data](#3.-running-the-dada2-textflow-pipeline-on-test-data)
 
 ## 1. Test sshing into the cluster
 Use your `USERNAME` (if you have not send your public key ssh would not work)
