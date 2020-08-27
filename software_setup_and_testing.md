@@ -2,10 +2,10 @@
 
 1. [Install Singularity on Ubuntu](#1-install-singularity-on-ubuntu)
 2. [Install Nextflow](#2-install-nextflow)
-3. Download the Rstudio Singularity image
-4. Running RStudio on a cluster
-5. Running Rstudio on a server
-6. Running the DADA2 Nextflow pipeline on test data
+3. [Download the Rstudio Singularity image](#3-download-the-rstudio-singularity-image)
+4. [Running RStudio on a cluster](#4-running-rstudio-on-a-cluster)
+5. [Running Rstudio on a server](#5-running-rstudio-on-a-server)
+6. [Running the DADA2 Nextflow pipeline on test data](#6-running-the-dada2-nextflow-pipeline-on-test-data)
 
 ## 1. Install Singularity on Ubuntu
 
