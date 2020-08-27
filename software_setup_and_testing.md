@@ -88,7 +88,7 @@ Host slwrk-*
     ProxyCommand ssh headnode nc %h 22
 ```
 
-One should substitute in your headnode, workernode and USERNAME settings in the above script.
+One should substitute in your headnode, workernode and `USERNAME` settings in the above script.
 
 Next is the process of starting an interactive job and launching RStudio. To begin start an interactive job – below is an example of launching a single node / 1 core job with 8Gb of ram:
 
@@ -97,7 +97,7 @@ USERNAME@slurm-login:~$ srun --nodes=1 --ntasks 1 --mem=8g --pty bash
 USERNAME@slwrk-103:~$
 ```
 
-Once the interactive session has begun on a specific node (in this case slwrk-103), RStudio can be launched as follows:
+Once the interactive session has begun on a specific node (in this case `slwrk-103`), RStudio can be launched as follows:
 
 ```
 USERNAME@slwrk-103:~$ RSTUDIO_PASSWORD='Make your own secure password here' /cbio/images/bionic-R3.6.1-RStudio1.2.1335-bio.simg
