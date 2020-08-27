@@ -1,7 +1,7 @@
 # 16S Intermediate Bioinformatics Training -  Software setup and testing
 
 1. [Install Singularity on Ubuntu](#1.-install-singularity-on-ubuntu)
-2. Install Nextflow
+2. [Install Nextflow](#2.-install-nextflow)
 3. Download the Rstudio Singularity image
 4. Running RStudio on a cluster
 5. Running Rstudio on a server
@@ -49,5 +49,22 @@ $ singularity version
 3.1.1
 ```
 
-
 Looks OK.
+
+## 2. Install Nextflow
+Nextflow needs to be installed in each user’s home directory (permissions assigned to the user) and be available on the users path.
+
+Requirements: Java 1.8 or later is required. Also see Nextflow setup instructions here.
+
+```
+$ mkdir /home/user/nextflow
+$ cd  /home/user/nextflow
+$ curl -s https://get.nextflow.io | bash
+$ echo “export PATH=$PATH:/home/user/nextflow/” >> /home/user/.bashrc
+$ sudo su user
+$ nextflow -v
+nextflow version 19.07.0.5106
+```
+
+Nextflow version 19.07 is fine.
+
