@@ -101,9 +101,8 @@ Once the interactive session has begun on a specific node (in this case `slwrk-1
 
 ```
 USERNAME@slwrk-103:~$ RSTUDIO_PASSWORD='Make your own secure password here' /cbio/images/bionic-R3.6.1-RStudio1.2.1335-bio.simg
-```
-
 Running rserver on port 37543
+```
 
 This will launch an RStudio server listening on a random free port (in this case 37543). Now one needs to port-forward from your local machine to the host machine. One connects to the appropriate node by running:
 
@@ -131,9 +130,8 @@ Start the server: (assume image is stored under `/share/images`)
 
 ```
 $ RSTUDIO_PASSWORD='Make your own secure password here' /share/images/bionic-R3.6.1-RStudio1.2.1335-bio.simg 
-```
-
 Running rserver on port 37543
+```
 
 Now use that port number in all the port settings below
 
