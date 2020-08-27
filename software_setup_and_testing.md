@@ -13,7 +13,7 @@ Singularity can be installed system wide. The most up to date instructions are f
 
 Lets install Singularity v3.1.1
 
-`
+```
 $ sudo apt-get update && sudo apt-get install -y \
     build-essential \
     libssl-dev \
@@ -47,5 +47,7 @@ $ ./mconfig && \
  
 $ singularity version
 3.1.1
-`
+```
+
+
 Looks OK.
