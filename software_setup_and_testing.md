@@ -9,7 +9,7 @@
 
 ## 1. Install Singularity on Ubuntu
 
-Singularity can be installed system wide. The most up to date instructions are found here.
+Singularity can be installed system wide. The most up to date instructions are found [here](https://sylabs.io/guides/3.0/user-guide/installation.html).
 
 Lets install Singularity v3.1.1
 
