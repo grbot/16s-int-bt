@@ -161,7 +161,7 @@ Looks OK.
 $ mkdir $HOME/test-data
 $ cd $HOME/test-data
 $ wget http://web.cbio.uct.ac.za/~gerrit/downloads/dog_stool_small.tgz
-$ tar -xzvf dog_stool.tgz
+$ tar -xzvf dog_stool_small.tgz
 ```
 ```
 $ mkdir $HOME/ref-data
