@@ -14,7 +14,7 @@ Singularity can be installed system wide. The most up to date instructions are f
 Lets install Singularity v3.6.2
 
 ```
-$ sudo apt-get update && sudo apt-get install -y \
+sudo apt-get update && sudo apt-get install -y \
     build-essential \
     libssl-dev \
     uuid-dev \
@@ -22,30 +22,43 @@ $ sudo apt-get update && sudo apt-get install -y \
     squashfs-tools \
     libseccomp-dev \
     pkg-config
-
-$ export VERSION=1.14.3 OS=linux ARCH=amd64 && \
+```
+```
+export VERSION=1.14.3 OS=linux ARCH=amd64 && \
     wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz && \
     sudo tar -C /usr/local -xzvf go$VERSION.$OS-$ARCH.tar.gz && \
     rm go$VERSION.$OS-$ARCH.tar.gz
+```
 
-$ echo 'export GOPATH=${HOME}/go' >> ~/.bashrc && \
+```
+echo 'export GOPATH=${HOME}/go' >> ~/.bashrc && \
     echo 'export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin' >> ~/.bashrc && \
     source ~/.bashrc
+```
 
-$ go get -u github.com/golang/dep/cmd/dep
+```
+go get -u github.com/golang/dep/cmd/dep
+```
 
-$ go get -d github.com/sylabs/singularity
+```
+go get -d github.com/sylabs/singularity
+```
 
-$ export VERSION=v3.6.2 # or another tag or branch if you like && \
+```
+export VERSION=v3.6.2 # or another tag or branch if you like && \
     cd $GOPATH/src/github.com/sylabs/singularity && \
     git fetch && \
     git checkout $VERSION
+```
 
-$ ./mconfig && \
+```
+./mconfig && \
     make -C ./builddir && \
     sudo make -C ./builddir install
- 
-$ singularity version
+```
+
+```
+singularity version
 3.1.1
 ```
 
@@ -57,11 +70,14 @@ Nextflow needs to be installed in each user’s home directory (permissions assi
 Requirements: Java 1.8 or later is required (e.g. `sudo apt install openjdk-8-jre-headless`). Also see Nextflow setup instructions [here](https://www.nextflow.io/docs/latest/getstarted.html#installation).
 
 ```
-$ mkdir $HOME/nextflow
-$ cd  $HOME/nextflow
-$ curl -s https://get.nextflow.io | bash
-$ echo "export PATH=$PATH:$HOME/nextflow/" >> $HOME/.bashrc
-$ nextflow -v
+mkdir $HOME/nextflow
+cd  $HOME/nextflow
+curl -s https://get.nextflow.io | bash
+echo "export PATH=$PATH:$HOME/nextflow/" >> $HOME/.bashrc
+```
+
+```
+nextflow -v
 nextflow version 20.07.1.5412
 ```
 
@@ -106,7 +122,7 @@ Running rserver on port 37543
 This will launch an RStudio server listening on a random free port (in this case 37543). Now one needs to port-forward from your local machine to the host machine. One connects to the appropriate node by running:
 
 ```
-$ ssh slwrk-103 -L8082:localhost:37543
+ssh slwrk-103 -L8082:localhost:37543
 ```
 
 On your local machine. Specifically what this does is forward traffic on your local machine's port 8082 to the worker node's port 37543 (and it knows how to connect to `slwrk-103` by using the `.ssh/config` settings above). One may use any free local port – ssh will complain if you choose something that is not free with an error message approximating:
@@ -122,13 +138,13 @@ Finally in your browser you can connect to `http://localhost:8082` and you can l
 ssh into server
 
 ```
-$ ssh USERNAME@SERVERNAME
+ssh USERNAME@SERVERNAME
 ```
 
 Start the server: (assume image is stored under `/share/images`)
 
 ```
-$ RSTUDIO_PASSWORD='Make your own secure password here' /share/images/bionic-R3.6.1-RStudio1.2.1335-bio.simg 
+RSTUDIO_PASSWORD='Make your own secure password here' /share/images/bionic-R3.6.1-RStudio1.2.1335-bio.simg 
 Running rserver on port 37543
 ```
 
@@ -158,24 +174,24 @@ Looks OK.
 
 ## 6. Running the DADA2 Nextflow pipeline on test data
 ```
-$ mkdir $HOME/test-data
-$ cd $HOME/test-data
-$ wget http://web.cbio.uct.ac.za/~gerrit/downloads/dog_stool_small.tgz
-$ tar -xzvf dog_stool_small.tgz
+mkdir $HOME/test-data
+cd $HOME/test-data
+wget http://web.cbio.uct.ac.za/~gerrit/downloads/dog_stool_small.tgz
+tar -xzvf dog_stool_small.tgz
 ```
 ```
-$ mkdir $HOME/ref-data
-$ cd $HOME/ref-data 
-$ wget https://zenodo.org/record/1172783/files/silva_nr_v132_train_set.fa.gz
-$ wget https://zenodo.org/record/1172783/files/silva_species_assignment_v132.fa.gz
+mkdir $HOME/ref-data
+cd $HOME/ref-data 
+wget https://zenodo.org/record/1172783/files/silva_nr_v132_train_set.fa.gz
+wget https://zenodo.org/record/1172783/files/silva_species_assignment_v132.fa.gz
 ```
 ```
-$ cd $HOME
-$ git clone https://github.com/h3abionet/16S-rDNA-dada2-pipeline
-$ cd $HOME/16S-rDNA-dada2-pipeline
+cd $HOME
+git clone https://github.com/h3abionet/16S-rDNA-dada2-pipeline
+cd $HOME/16S-rDNA-dada2-pipeline
 ```
 ```
-$ nextflow run main.nf -profile standard --reads="$HOME/test-data/*_R{1,2}.fastq.gz" --trimFor 24 --trimRev 25 --reference="$HOME/ref-data/silva_nr_v132_train_set.fa.gz" --species="$HOME/ref-data/silva_species_assignment_v132.fa.gz" --outdir="$HOME/out"
+nextflow run main.nf -profile standard --reads="$HOME/test-data/*_R{1,2}.fastq.gz" --trimFor 24 --trimRev 25 --reference="$HOME/ref-data/silva_nr_v132_train_set.fa.gz" --species="$HOME/ref-data/silva_species_assignment_v132.fa.gz" --outdir="$HOME/out"
 
 N E X T F L O W  ~  version 19.04.1
 Launching `main.nf` [soggy_gilbert] - revision: 1696132777
