@@ -54,19 +54,18 @@ Looks OK.
 ## 2. Install Nextflow
 Nextflow needs to be installed in each user’s home directory (permissions assigned to the user) and be available on the users path.
 
-Requirements: Java 1.8 or later is required. Also see Nextflow setup instructions [here](https://www.nextflow.io/docs/latest/getstarted.html#installation).
+Requirements: Java 1.8 or later is required (e.g. `sudo apt install openjdk-8-jre-headless`). Also see Nextflow setup instructions [here](https://www.nextflow.io/docs/latest/getstarted.html#installation).
 
 ```
-$ mkdir /home/user/nextflow
-$ cd  /home/user/nextflow
+$ mkdir $HOME/nextflow
+$ cd  $HOME/nextflow
 $ curl -s https://get.nextflow.io | bash
-$ echo “export PATH=$PATH:/home/user/nextflow/” >> /home/user/.bashrc
-$ sudo su user
+$ echo "export PATH=$PATH:$HOME/nextflow/" >> $HOME/.bashrc
 $ nextflow -v
-nextflow version 19.07.0.5106
+nextflow version 20.07.1.5412
 ```
 
-Nextflow version >=19.07 is fine.
+Nextflow version >=20.07.1.5412 is fine.
 
 ## 3. Download the Rstudio Singularity image
 Download the Rstudio Singularity image [here](http://web.cbio.uct.ac.za/~gerrit/downloads/bionic-R3.6.1-RStudio1.2.1335-bio.simg).
