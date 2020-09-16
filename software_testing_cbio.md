@@ -53,7 +53,7 @@ USERNAME@cbio-compute-01:~$
 Once the interactive session has begun on a specific node (in this case slurm_worker-0002), RStudio can be launched as follows:
 
 ```
-USERNAME@cbio-compute-01:~$ RSTUDIO_PASSWORD='Make your own secure password here' /cbio/containers/bionic-R3.6.1-RStudio1.2.1335-bio.simg
+USERNAME@cbio-compute-01:~$ RSTUDIO_PASSWORD='Make your own secure password here' /ceph/containers/bionic-R3.6.1-RStudio1.2.1335-bio.simg
 ```
 
 Running rserver on port 45299
