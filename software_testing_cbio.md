@@ -58,7 +58,7 @@ USERNAME@cbio-compute-01:~$ RSTUDIO_PASSWORD='Make your own secure password here
 
 Running rserver on port 45299
 
-This will launch an RStudio server listening on a random free port (in this case 37543). Now one needs to do port-forward from your local machine to the host machine. 
+This will launch an RStudio server listening on a random free port (in this case 45299). Now one needs to do port-forward from your local machine to the host machine. 
 
 Open up a new terminal. One connects to the appropriate node by running:
 ```
