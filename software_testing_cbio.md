@@ -32,7 +32,7 @@ Host cbio-training.ilifu.ac.za
     User USERNAME
     ForwardAgent yes
 
-Host slurm_worker-*
+Host cbio-compute-*
     Hostname %h
     User USERNAME
     StrictHostKeyChecking no
