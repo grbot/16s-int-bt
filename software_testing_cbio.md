@@ -7,16 +7,16 @@
 ## 1. Test sshing into the cluster
 Use your `USERNAME` (if you have not send your public key ssh would not work)
 ```
-$ ssh USERNAME@154.114.37.238
-$ USERNAME@slurm_login:~$ hostname
+$ ssh USERNAME@cbio-training.ilifu.ac.za
+$ USERNAME@cbio-login:~$ hostname
 slurm_login
 ```
 
 Submit an interactive job
 ```
 $ srun --nodes=1 --ntasks 1 --mem=8g --pty bash
-gerrit@slurm_worker-0002:~$ hostname
-slurm_worker-0002
+gerrit@cbio-compute-01:~$ hostname
+cbio-compute-01
 ```
 
 ## 2. Running RStudio on the Ilifu SLURM cluster
@@ -28,7 +28,7 @@ nano `~/.ssh/config`
 
 Need to do this on your local machine
 ```
-Host 154.114.37.238
+Host cbio-training.ilifu.ac.za
     User USERNAME
     ForwardAgent yes
 
@@ -36,24 +36,24 @@ Host slurm_worker-*
     Hostname %h
     User USERNAME
     StrictHostKeyChecking no
-    ProxyCommand ssh 154.114.37.238 nc %h 22
+    ProxyCommand ssh cbio-training.ilifu.ac.za nc %h 22
 ```
 One should substitute your login ID (name) in `USERNAME` settings in the above script.
 
 Open up a terminal. And start  a new session.
 ```
-$ ssh gerrit@154.114.37.238
+$ ssh gerrit@cbio-training.ilifu.ac.za
 ```
 
 Next is the process of starting an interactive job and launching RStudio. To begin start an interactive job – below is an example of launching a single node / 1 core job with 8Gb of ram:
 ```
-USERNAME@slurm-login:~$ srun --nodes=1 --ntasks 1 --mem=8g --pty bash
-USERNAME@slurm_worker-0002:~$
+USERNAME@cbio-login:~$ srun --nodes=1 --ntasks 1 --mem=8g --pty bash
+USERNAME@cbio-compute-01:~$
 ```
 Once the interactive session has begun on a specific node (in this case slurm_worker-0002), RStudio can be launched as follows:
 
 ```
-USERNAME@slurm_worker-0002:~$ RSTUDIO_PASSWORD='Make your own secure password here' /cbio/containers/bionic-R3.6.1-RStudio1.2.1335-bio.simg
+USERNAME@cbio-compute-01:~$ RSTUDIO_PASSWORD='Make your own secure password here' /cbio/containers/bionic-R3.6.1-RStudio1.2.1335-bio.simg
 ```
 
 Running rserver on port 45299
@@ -62,7 +62,7 @@ This will launch an RStudio server listening on a random free port (in this case
 
 Open up a new terminal. One connects to the appropriate node by running:
 ```
-$ ssh slurm_worker-0002 -L8082:localhost:45299
+$ ssh cbio-compute-01 -L8082:localhost:45299
 ```
 On your local machine. Specifically what this does is forward traffic on your local machine's port 8082 to the worker node's port 37543 (and it knows how to connect to slwrk-103 by using the .ssh/config settings above). One may use any free local port – ssh will complain if you choose something that is not free with an error message approximating:
 ```
