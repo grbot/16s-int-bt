@@ -5,7 +5,7 @@
 3. [Running the DADA2 Nextflow pipeline on test data](#3.-running-the-dada2-textflow-pipeline-on-test-data)
 
 ## 1. Test sshing into the cluster
-Use your `USERNAME` (if you have not send your public key ssh would not work)
+Use your [`USERNAME`](https://docs.google.com/spreadsheets/d/1eky5z6oltTRo_SDELbyxd5Vi-f8Ub-oRYp_slAqUOQU/) (if you have not send your public key ssh would not work)
 ```
 $ ssh USERNAME@cbio-training.ilifu.ac.za
 USERNAME@cbio-login:~$ hostname
