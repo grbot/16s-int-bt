@@ -187,7 +187,7 @@ wget https://zenodo.org/record/1172783/files/silva_species_assignment_v132.fa.gz
 ```
 ```
 cd $HOME
-git clone https://github.com/h3abionet/16S-rDNA-dada2-pipeline
+git clone https://github.com/grbot/16S-rDNA-dada2-pipeline
 cd $HOME/16S-rDNA-dada2-pipeline
 ```
 ```
