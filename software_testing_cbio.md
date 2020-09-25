@@ -7,14 +7,14 @@
 ## 1. Test sshing into the cluster
 Use your `USERNAME` (if you have not send your public key ssh would not work)
 ```
-ssh USERNAME@cbio-training.ilifu.ac.za
+$ ssh USERNAME@cbio-training.ilifu.ac.za
 USERNAME@cbio-login:~$ hostname
 slurm_login
 ```
 
 Submit an interactive job
 ```
-srun --nodes=1 --ntasks 1 --mem=8g --pty bash
+$ srun --nodes=1 --ntasks 1 --mem=8g --pty bash
 gerrit@cbio-compute-01:~$ hostname
 cbio-compute-01
 ```
@@ -91,18 +91,18 @@ Looks OK.
 
 Get onto a node first
 ```
-srun --nodes=1 --ntasks 1 --mem=8g --pty bash
+$ srun --nodes=1 --ntasks 1 --mem=8g --pty bash
 ```
 Now do the setup
 ```
-cd $HOME
-git clone https://github.com/grbot/16S-rDNA-dada2-pipeline
-cd $HOME/16S-rDNA-dada2-pipeline
+$ cd $HOME
+$ git clone https://github.com/grbot/16S-rDNA-dada2-pipeline
+$ cd $HOME/16S-rDNA-dada2-pipeline
 ```
 
 Run nextflow
 ```
-nextflow run main.nf -profile standard --reads="/ceph/data/test-data/*_R{1,2}.fastq.gz" --trimFor 24 --trimRev 25 --reference="/ceph/data/ref-data/silva_nr_v132_train_set.fa.gz" --species="/ceph/data/ref-data/silva_species_assignment_v132.fa.gz" --outdir="$HOME/out"
+$ nextflow run main.nf -profile standard --reads="/ceph/data/test-data/*_R{1,2}.fastq.gz" --trimFor 24 --trimRev 25 --reference="/ceph/data/ref-data/silva_nr_v132_train_set.fa.gz" --species="/ceph/data/ref-data/silva_species_assignment_v132.fa.gz" --outdir="$HOME/out"
 N E X T F L O W  ~  version 19.07.0
 Launching `main.nf` [exotic_heisenberg] - revision: 1696132777
 ===================================
