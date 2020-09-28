@@ -89,11 +89,7 @@ Looks OK.
 
 ## 3. Running the DADA2 Nextflow pipeline on test data
 
-Get onto a node first
-```
-$ srun --nodes=1 --ntasks 1 --mem=8g --pty bash
-```
-Now do the setup
+Do the setup
 ```
 $ cd $HOME
 $ git clone https://github.com/grbot/16S-rDNA-dada2-pipeline
@@ -102,7 +98,7 @@ $ cd $HOME/16S-rDNA-dada2-pipeline
 
 Run nextflow
 ```
-$ nextflow run main.nf -profile standard --reads="/ceph/data/test-data/*_R{1,2}.fastq.gz" --trimFor 24 --trimRev 25 --reference="/ceph/data/ref-data/silva_nr_v132_train_set.fa.gz" --species="/ceph/data/ref-data/silva_species_assignment_v132.fa.gz" --outdir="$HOME/out"
+$ nextflow run main.nf -profile training --reads="/ceph/data/test-data/*_R{1,2}.fastq.gz" --trimFor 24 --trimRev 25 --reference="/ceph/data/ref-data/silva_nr_v132_train_set.fa.gz" --species="/ceph/data/ref-data/silva_species_assignment_v132.fa.gz" --outdir="$HOME/out"
 N E X T F L O W  ~  version 19.07.0
 Launching `main.nf` [exotic_heisenberg] - revision: 1696132777
 ===================================
