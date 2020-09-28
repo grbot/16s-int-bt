@@ -92,7 +92,7 @@ Looks OK.
 Do the setup
 ```
 $ cd $HOME
-$ git clone https://github.com/grbot/16S-rDNA-dada2-pipeline
+$ git clone https://github.com/h3abionet/16S-rDNA-dada2-pipeline
 $ cd $HOME/16S-rDNA-dada2-pipeline
 ```
 
