@@ -89,6 +89,11 @@ Looks OK.
 
 ## 3. Running the DADA2 Nextflow pipeline on test data
 
+Login to master node
+```
+$ ssh USERNAME@cbio-training.ilifu.ac.za
+```
+
 Do the setup
 ```
 $ cd $HOME
