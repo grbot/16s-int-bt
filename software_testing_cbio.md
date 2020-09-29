@@ -9,7 +9,7 @@ Use your [`USERNAME`](https://docs.google.com/spreadsheets/d/1eky5z6oltTRo_SDELb
 ```
 $ ssh USERNAME@cbio-training.ilifu.ac.za
 USERNAME@cbio-login:~$ hostname
-slurm_login
+cbio-login
 ```
 
 Submit an interactive job
