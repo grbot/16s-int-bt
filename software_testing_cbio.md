@@ -42,7 +42,7 @@ One should substitute your login ID (name) in `USERNAME` settings in the above s
 
 Open up a terminal. And start  a new session.
 ```
-$ ssh gerrit@cbio-training.ilifu.ac.za
+$ ssh USERNAME@cbio-training.ilifu.ac.za
 ```
 
 Next is the process of starting an interactive job and launching RStudio. To begin start an interactive job – below is an example of launching a single node / 1 core job with 8Gb of ram:
