@@ -59,7 +59,7 @@ export VERSION=v3.6.2 # or another tag or branch if you like && \
 
 ```
 singularity version
-3.1.1
+3.6.2
 ```
 
 Looks OK.
