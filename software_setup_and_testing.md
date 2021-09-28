@@ -256,4 +256,13 @@ Succeeded   : 27
 ```
 Looks OK.
 
+If you do get an error when pulling down the Fastqc image from Nextflow:
 
+```
+ FATAL:   While making image from oci registry: error fetching image to cache: while building SIF from layers: conveyor failed to get: no descriptor found for reference "72d556833da1d3c540682be3a74e46fbeb93c5a3b7a846d4d7df687b93c72c46"
+```
+This seems to be a parallel race issue with the latest Nextflow/Singularity combination. Just pull down the image manually so that it is registered in the Singularity cache.
+```
+ singularity pull  --name quay.io-h3abionet_org-h3a16s-fastqc.img.pulling.1632813507040 docker://quay.io/h3abionet_org/h3a16s-fastqc > /dev/null
+```
+Then run the Nextflow command as suggested earlier.
