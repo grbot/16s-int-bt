@@ -24,7 +24,7 @@ sudo apt-get update && sudo apt-get install -y \
     pkg-config
 ```
 ```
-export VERSION=1.17.1 OS=linux ARCH=amd64 && \
+export VERSION=1.14.3 OS=linux ARCH=amd64 && \
     wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz && \
     sudo tar -C /usr/local -xzvf go$VERSION.$OS-$ARCH.tar.gz && \
     rm go$VERSION.$OS-$ARCH.tar.gz
@@ -59,7 +59,7 @@ export VERSION=v3.8.3 # or another tag or branch if you like && \
 
 ```
 singularity version
-3.6.2
+3.8.3
 ```
 
 Looks OK.
