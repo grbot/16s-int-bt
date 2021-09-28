@@ -11,7 +11,7 @@
 
 Singularity can be installed system wide. The most up to date instructions are found [here](https://sylabs.io/guides/3.0/user-guide/installation.html).
 
-Lets install Singularity v3.6.2
+Lets install Singularity v3.8.3
 
 ```
 sudo apt-get update && sudo apt-get install -y \
@@ -24,7 +24,7 @@ sudo apt-get update && sudo apt-get install -y \
     pkg-config
 ```
 ```
-export VERSION=1.14.3 OS=linux ARCH=amd64 && \
+export VERSION=1.17.1 OS=linux ARCH=amd64 && \
     wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz && \
     sudo tar -C /usr/local -xzvf go$VERSION.$OS-$ARCH.tar.gz && \
     rm go$VERSION.$OS-$ARCH.tar.gz
@@ -45,7 +45,7 @@ go get -d github.com/sylabs/singularity
 ```
 
 ```
-export VERSION=v3.6.2 # or another tag or branch if you like && \
+export VERSION=v3.8.3 # or another tag or branch if you like && \
     cd $GOPATH/src/github.com/sylabs/singularity && \
     git fetch && \
     git checkout $VERSION
