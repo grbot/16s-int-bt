@@ -53,7 +53,7 @@ USERNAME@cbio-compute-01:~$
 Once the interactive session has begun on a specific node (in this case slurm_worker-0002), RStudio can be launched as follows:
 
 ```
-USERNAME@cbio-compute-01:~$ RSTUDIO_PASSWORD='Make your own secure password here' /ceph/containers/bionic-R3.6.1-RStudio1.2.1335-bio.simg
+USERNAME@cbio-compute-01:~$ RSTUDIO_PASSWORD='Make your own secure password here' /cbio/images/bionic-R3.6.1-RStudio1.2.1335-bio.simg
 ```
 
 Running rserver on port 45299
@@ -103,7 +103,7 @@ $ cd $HOME/16S-rDNA-dada2-pipeline
 
 Run nextflow
 ```
-$ nextflow run main.nf -profile training --reads="/ceph/data/test-data/*_R{1,2}.fastq.gz" --trimFor 24 --trimRev 25 --reference="/ceph/data/ref-data/silva_nr_v132_train_set.fa.gz" --species="/ceph/data/ref-data/silva_species_assignment_v132.fa.gz" --outdir="$HOME/out"
+$ nextflow run main.nf -profile training --reads="/cbio/data/test-data/*_R{1,2}.fastq.gz" --trimFor 24 --trimRev 25 --reference="/cbio/data/ref-data/silva_nr_v132_train_set.fa.gz" --species="/cbio/data/ref-data/silva_species_assignment_v132.fa.gz" --outdir="$HOME/out"
 N E X T F L O W  ~  version 19.07.0
 Launching `main.nf` [exotic_heisenberg] - revision: 1696132777
 ===================================
