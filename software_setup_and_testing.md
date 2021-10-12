@@ -191,7 +191,7 @@ git clone https://github.com/h3abionet/16S-rDNA-dada2-pipeline
 cd $HOME/16S-rDNA-dada2-pipeline
 ```
 ```
-nextflow run main.nf -profile standard --reads="$HOME/test-data/*_R{1,2}.fastq.gz" --trimFor 24 --trimRev 25 --reference="$HOME/ref-data/silva_nr_v132_train_set.fa.gz" --species="$HOME/ref-data/silva_species_assignment_v132.fa.gz" --outdir="$HOME/out"
+nextflow run main.nf -profile standard --reads="$HOME/test-data/*_R{1,2}.fastq.gz" --trimFor 24 --trimRev 25 --reference="$HOME/ref-data/silva_nr_v132_train_set.fa.gz" --species="$HOME/ref-data/silva_species_assignment_v132.fa.gz" --runTree="fasttree" --outdir="$HOME/out"
 
 N E X T F L O W  ~  version 19.04.1
 Launching `main.nf` [soggy_gilbert] - revision: 1696132777
