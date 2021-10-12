@@ -15,8 +15,8 @@ cbio-login
 Submit an interactive job
 ```
 $ srun --nodes=1 --ntasks 1 --mem=8g --pty bash
-gerrit@cbio-compute-01:~$ hostname
-cbio-compute-01
+gerrit@slurm-worker-0001:~$ hostname
+slurm-worker-0001
 ```
 
 ## 2. Running RStudio on the Ilifu SLURM cluster
@@ -32,7 +32,7 @@ Host cbio-training.ilifu.ac.za
     User USERNAME
     ForwardAgent yes
 
-Host cbio-compute-*
+Host slurm-worker-*
     Hostname %h
     User USERNAME
     StrictHostKeyChecking no
@@ -47,13 +47,13 @@ $ ssh USERNAME@cbio-training.ilifu.ac.za
 
 Next is the process of starting an interactive job and launching RStudio. To begin start an interactive job – below is an example of launching a single node / 1 core job with 8Gb of ram:
 ```
-USERNAME@cbio-login:~$ srun --nodes=1 --ntasks 1 --mem=8g --pty bash
-USERNAME@cbio-compute-01:~$
+USERNAME@slurm-login:~$ srun --nodes=1 --ntasks 1 --mem=8g --pty bash
+USERNAME@slurm-worker-0001:~$
 ```
 Once the interactive session has begun on a specific node (in this case slurm_worker-0002), RStudio can be launched as follows:
 
 ```
-USERNAME@cbio-compute-01:~$ RSTUDIO_PASSWORD='Make your own secure password here' /cbio/images/bionic-R3.6.1-RStudio1.2.1335-bio.simg
+USERNAME@slurm-worker-0001:~$ RSTUDIO_PASSWORD='Make your own secure password here' /cbio/images/bionic-R3.6.1-RStudio1.2.1335-bio.simg
 ```
 
 Running rserver on port 45299
@@ -62,9 +62,9 @@ This will launch an RStudio server listening on a random free port (in this case
 
 Open up a new terminal. One connects to the appropriate node by running:
 ```
-ssh cbio-compute-01 -L8082:localhost:45299
+ssh slurm-worker-0001 -L8082:localhost:45299
 ```
-On your local machine. Specifically what this does is forward traffic on your local machine's port 8082 to the worker node's port 37543 (and it knows how to connect to slwrk-103 by using the .ssh/config settings above). One may use any free local port – ssh will complain if you choose something that is not free with an error message approximating:
+On your local machine. Specifically what this does is forward traffic on your local machine's port 8082 to the worker node's port 45299 (and it knows how to connect to slurm-worker-0001 by using the .ssh/config settings above). One may use any free local port – ssh will complain if you choose something that is not free with an error message approximating:
 ```
 bind [127.0.0.1]:8000: Address already in use
 channel_setup_fwd_listener_tcpip: cannot listen to port: 8000
