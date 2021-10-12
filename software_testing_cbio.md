@@ -103,7 +103,7 @@ $ cd $HOME/16S-rDNA-dada2-pipeline
 
 Run nextflow
 ```
-$ nextflow run main.nf -profile training --reads="/cbio/data/test-data/*_R{1,2}.fastq.gz" --trimFor 24 --trimRev 25 --reference="/cbio/data/ref-data/silva_nr_v132_train_set.fa.gz" --species="/cbio/data/ref-data/silva_species_assignment_v132.fa.gz" --runTree="fasttree" --outdir="$HOME/out"
+$ nextflow run main.nf -profile standard --reads="/cbio/data/test-data/*_R{1,2}.fastq.gz" --trimFor 24 --trimRev 25 --reference="/cbio/data/ref-data/silva_nr_v132_train_set.fa.gz" --species="/cbio/data/ref-data/silva_species_assignment_v132.fa.gz" --runTree="fasttree" --outdir="$HOME/out"
 N E X T F L O W  ~  version 19.07.0
 Launching `main.nf` [exotic_heisenberg] - revision: 1696132777
 ===================================
