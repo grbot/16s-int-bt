@@ -8,8 +8,8 @@
 Use your [`USERNAME`](https://docs.google.com/spreadsheets/d/1jN3MCGJpLzsYHnda6RWdqgdv37KPEk9Ut4O_kinn2sU) (if you have not send your public key ssh would not work)
 ```
 $ ssh USERNAME@cbio-training.ilifu.ac.za
-USERNAME@cbio-login:~$ hostname
-cbio-login
+USERNAME@slurm-login:~$ hostname
+slurm-login
 ```
 
 Submit an interactive job
