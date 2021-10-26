@@ -19,7 +19,7 @@ gerrit@slurm-worker-0001:~$ hostname
 slurm-worker-0001
 ```
 
-## 2. Running RStudio on the Ilifu SLURM cluster
+## 2. Running RStudio on the Ilifu Slurm cluster
 
 The steps works for both Linux and Windows users. Windows users please use git-bash.
 
@@ -50,7 +50,7 @@ Next is the process of starting an interactive job and launching RStudio. To beg
 USERNAME@slurm-login:~$ srun --nodes=1 --ntasks 1 --mem=8g --pty bash
 USERNAME@slurm-worker-0001:~$
 ```
-Once the interactive session has begun on a specific node (in this case slurm_worker-0001), RStudio can be launched as follows:
+Once the interactive session has begun on a specific node (in this case slurm-worker-0001), RStudio can be launched as follows:
 
 ```
 USERNAME@slurm-worker-0001:~$ RSTUDIO_PASSWORD='Make your own secure password here' /cbio/images/bionic-R3.6.1-RStudio1.2.1335-bio.simg
