@@ -103,7 +103,7 @@ $ cd $HOME/16S-rDNA-dada2-pipeline
 
 Get onto a node and select 2 cores
 ```
-$  srun --nodes=1 --ntasks 2 --mem=8g --pty bash
+$  srun --nodes=1 --cpus-per-task 2 --mem=8g --pty bash
 ```
 Run nextflow
 ```
