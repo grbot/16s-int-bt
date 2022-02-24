@@ -92,7 +92,7 @@ This setup is focus on running a RStudio Singularity container on a SLURM cluste
 Firstly one should configure ssh in such a way that it is simple to connect to a worker node once a job is running. The easiest way it to add the following to your `local ~/.ssh/config` file:
 
 ```
-Host *.ilifu.ac.za
+Host cbio-training.ilifu.ac.za
     User USERNAME
     ForwardAgent yes
 
@@ -100,7 +100,7 @@ Host slwrk-*
     Hostname %h
     User USERNAME
     StrictHostKeyChecking no
-    ProxyCommand ssh headnode nc %h 22
+    ProxyCommand ssh cbio-training nc %h 22
 ```
 
 One should substitute in your headnode, workernode and `USERNAME` settings in the above script.
